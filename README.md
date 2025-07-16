@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+=======
+# RemStirka
 
-## Getting Started
+**RemStirka** — официальный сайт сервисной компании, предоставляющей услуги по ремонту бытовой техники в городе **Алматы**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Описание
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Мы специализируемся на ремонте стиральных машин, холодильников и другой бытовой техники.  
+На сайте клиенты могут оставить заявку, указав имя и номер телефона — заявка автоматически поступает в Telegram-бот компании.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Услуги
 
-## Learn More
+- Ремонт стиральных машин
+- Ремонт холодильников
+- Диагностика и обслуживание
+- Выезд мастера на дом
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔐 Политика конфиденциальности
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Все данные, вводимые пользователями (имя и номер телефона), не сохраняются на сервере и не передаются третьим лицам.
+- Данные используются исключительно для связи по заявке.
+- Отправка заявок осуществляется напрямую через Telegram API.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 Условия использования
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Отправляя заявку, пользователь подтверждает согласие на обратную связь.
+- Сайт не использует cookies и не собирает аналитических данных.
+- Вся информация, размещённая на сайте, носит информационный характер.
+
+---
+
+## 📬 Контакты
+
+**RemStirka — Ремонт бытовой техники в Алматы**  
+📱 Telegram разработчика: [@Zyko2442](https://t.me/Zyko2442)  
+🌐 Сайт: [https://remstirka.kz](https://remstirka.kz)
+
+---
+
+## 📝 Лицензия
+
+Проект распространяется под лицензией **MIT**.  
+Разрешено свободно использовать и адаптировать код с указанием авторства.
+
+>>>>>>> 7a16218f58aebb464930240312815d59b892d0b5
