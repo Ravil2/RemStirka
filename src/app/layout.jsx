@@ -52,7 +52,35 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <head />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'RemStirka',
+              image: 'https://remstirka.kz/images/og-image.jpg',
+              url: 'https://remstirka.kz',
+              telephone: '+7 747 700 0871',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Алматы',
+                addressCountry: 'KZ',
+              },
+              description:
+                'Профессиональный ремонт стиральных машин, холодильников и сушилок в Алматы. Срочный выезд, гарантия, доступные цены.',
+              areaServed: 'Алматы',
+              openingHours: 'Mo-Su 09:00-21:00',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+7 747 700 0871',
+                contactType: 'customer support',
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={`${rubik.variable} font-sans`}>
         <Header />
         <main>{children}</main>

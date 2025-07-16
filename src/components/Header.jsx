@@ -7,7 +7,7 @@ export default function Header() {
   const toggleMenu = () => setMenuOpen(!menuOpen)
 
   return (
-    <header className="relative flex justify-between items-center px-5 py-5 border-b border-gray-300">
+    <header className="relative flex justify-between items-center px-5 md:px-5 xl:px-20 py-5 border-b border-gray-300">
       <a
         href="/"
         className="text-2xl font-bold text-black"
@@ -21,7 +21,6 @@ export default function Header() {
           {navItems.map((item) => (
             <li
               key={item.href}
-              className="border-b border-transparent hover:border-gray-400"
             >
               <a href={item.href} className="px-2 py-1 hover:text-black">
                 {item.label}
@@ -41,7 +40,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Мобильное меню (во весь экран) */}
       {menuOpen && (
         <div className="fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col justify-between p-6">
           <a
