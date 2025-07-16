@@ -8,7 +8,6 @@ export default function Header() {
 
   return (
     <header className="relative flex justify-between items-center px-5 py-5 border-b border-gray-300">
-      {/* Логотип */}
       <a
         href="/"
         className="text-2xl font-bold text-black"
@@ -17,7 +16,6 @@ export default function Header() {
         RemStirka
       </a>
 
-      {/* Desktop навигация */}
       <nav className="hidden md:block">
         <ul className="flex gap-6 text-base font-medium text-gray-800 ">
           {navItems.map((item) => (
@@ -33,7 +31,6 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* Бургер-иконка */}
       <div className="md:hidden z-50">
         <button onClick={toggleMenu} aria-label="Меню">
           {menuOpen ? (
