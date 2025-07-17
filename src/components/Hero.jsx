@@ -1,46 +1,87 @@
 import Image from 'next/image'
-import React from 'react'
+import { PhoneCall, ShieldCheck, Clock, Wrench } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden" aria-labelledby="hero-title">
-      <div className="container mx-auto px-4 py-8 md:py-12 lg:py-15 xl:py-15">
-        <div className="flex flex-col lg:flex-row items-center gap-8">
-          <div className="w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8 flex flex-col">
-            <div>
-              <h1
-                id="hero-title"
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-tight"
-              >
-                Профессиональный ремонт стиральных машин в Алматы
-              </h1>
+    <section className="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+      {/* Декоративные элементы */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-blue-200 blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-blue-100 blur-3xl"></div>
+      </div>
 
-              <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mt-4 md:mt-6">
-                Добро пожаловать в <strong>RemStirka</strong> — ваш надежный
-                сервис по ремонту бытовой техники, специализирующийся на
-                стиральных машинах. Наша команда предлагает быстрый и
-                качественный ремонт с гарантией.
-              </p>
+      <div className="container mx-auto px-4 py-12 md:py-20 lg:py-28">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20">
+          {/* Текстовый блок */}
+          <div className="w-full lg:w-1/2 space-y-6 md:space-y-8">
+            <div className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-700 bg-blue-100 rounded-full mb-4">
+              <ShieldCheck className="w-4 h-4 mr-2" />
+              Гарантия качества
             </div>
 
-            <a
-              href="#request"
-              className="w-full items-center text-center md:w-auto bg-black text-white py-3 px-6 rounded-xl cursor-pointer hover:bg-gray-800 transition-all mt-6 md:mt-0 self-start"
-              aria-label="Оставить заявку на ремонт стиральной машины"
-            >
-              Оставить заявку
-            </a>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+              <span className="text-blue-600">Ремонт стиральных машин</span> в Алматы с выездом на дом
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              <strong>RemStirka</strong> — профессиональный сервис по ремонту бытовой техники. 
+              Мы устраняем любые неисправности быстро и с гарантией до 2 лет.
+            </p>
+
+            {/* Преимущества в виде списка */}
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              {[
+                { icon: <Clock className="w-5 h-5 text-blue-600" />, text: "Выезд в течение 2 часов" },
+                { icon: <Wrench className="w-5 h-5 text-blue-600" />, text: "Оригинальные запчасти" },
+                { icon: <ShieldCheck className="w-5 h-5 text-blue-600" />, text: "Гарантия до 2 лет" },
+                { icon: <PhoneCall className="w-5 h-5 text-blue-600" />, text: "Круглосуточная поддержка" }
+              ].map((item, index) => (
+                <li key={index} className="flex items-center space-x-2">
+                  {item.icon}
+                  <span className="text-gray-700">{item.text}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Кнопки действий */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <a
+                href="#request"
+                className="inline-flex items-center justify-center px-6 py-4 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-colors shadow-lg"
+              >
+                <PhoneCall className="w-5 h-5 mr-2" />
+                Вызвать мастера
+              </a>
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center px-6 py-4 bg-white text-gray-700 font-medium rounded-xl hover:bg-gray-100 transition-colors border border-gray-200"
+              >
+                Наши услуги
+              </a>
+            </div>
           </div>
 
-          <div className="hidden lg:block w-full lg:w-1/2 relative h-64 md:h-80 lg:h-96 xl:h-[500px]">
+          {/* Изображение */}
+          <div className="w-full lg:w-1/2 relative h-80 md:h-[450px] lg:h-[550px]">
             <Image
               src="/images/icons/human.png"
-              alt="Мастер по ремонту стиральных машин RemStirka в Алматы"
+              alt="Мастер RemStirka ремонтирует стиральную машину"
               fill
               className="object-contain object-center"
               priority
-              sizes="50vw"
+              quality={100}
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
+            {/* Декоративный элемент на изображении */}
+            <div className="absolute -bottom-6 -right-6 bg-white px-4 py-3 rounded-lg shadow-md border border-gray-100 hidden lg:block">
+              <div className="flex items-center">
+                <div className="bg-green-100 p-2 rounded-full mr-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600" />
+                </div>
+                <span className="font-medium">Работаем с 2019 года</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
