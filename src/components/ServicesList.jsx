@@ -92,8 +92,10 @@ const ServicesList = () => {
       </div>
 
       <div className="mt-16 text-center">
-        <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">
-          Получить консультацию
+        <button className="cursor-pointer inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+          <a target="_blank" href="https://wa.me/77477000871">
+            Получить консультацию
+          </a>
         </button>
       </div>
     </div>
