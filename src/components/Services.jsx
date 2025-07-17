@@ -147,7 +147,7 @@ export default function Services() {
           </p>
           <button className="cursor-pointer inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors shadow-md">
             <PhoneCall className="w-5 h-5 mr-2 " />
-            Вызвать мастера
+            <a target='_blank' href="https://wa.me/77477000871">Вызвать мастера</a>
           </button>
         </div>
       </div>

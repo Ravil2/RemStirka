@@ -4,12 +4,10 @@ import { CheckCircle2 } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section id='home' className="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-blue-200 blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-blue-100 blur-3xl"></div>
-      </div>
-
+    <section
+      id="home"
+      className="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden"
+    >
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-28">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20">
           <div className="w-full lg:w-1/2 space-y-6 md:space-y-8">
@@ -19,20 +17,34 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
-              <span className="text-blue-600">Ремонт стиральных машин</span> в Алматы с выездом на дом
+              <span className="text-blue-600">Ремонт стиральных машин</span> в
+              Алматы с выездом на дом
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              <strong>RemStirka</strong> — профессиональный сервис по ремонту бытовой техники. 
-              Мы устраняем любые неисправности быстро и с гарантией до 1 года.
+              <strong>RemStirka</strong> — профессиональный сервис по ремонту
+              бытовой техники. Мы устраняем любые неисправности быстро и с
+              гарантией до 1 года.
             </p>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
               {[
-                { icon: <Clock className="w-5 h-5 text-blue-600" />, text: "Выезд в течение 2 часов" },
-                { icon: <Wrench className="w-5 h-5 text-blue-600" />, text: "Оригинальные запчасти" },
-                { icon: <ShieldCheck className="w-5 h-5 text-blue-600" />, text: "Гарантия до 1 года" },
-                { icon: <PhoneCall className="w-5 h-5 text-blue-600" />, text: "Круглосуточная поддержка" }
+                {
+                  icon: <Clock className="w-5 h-5 text-blue-600" />,
+                  text: 'Выезд в течение 2 часов',
+                },
+                {
+                  icon: <Wrench className="w-5 h-5 text-blue-600" />,
+                  text: 'Оригинальные запчасти',
+                },
+                {
+                  icon: <ShieldCheck className="w-5 h-5 text-blue-600" />,
+                  text: 'Гарантия до 1 года',
+                },
+                {
+                  icon: <PhoneCall className="w-5 h-5 text-blue-600" />,
+                  text: 'Круглосуточная поддержка',
+                },
               ].map((item, index) => (
                 <li key={index} className="flex items-center space-x-2">
                   {item.icon}
@@ -43,11 +55,12 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a
-                href="#request"
+                target="_blank"
+                href="https://wa.me/77477000871"
                 className="inline-flex items-center justify-center px-6 py-4 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-colors shadow-lg"
               >
                 <PhoneCall className="w-5 h-5 mr-2" />
-                Вызвать мастера
+                <span>Вызвать мастера</span>
               </a>
               <a
                 href="#services"
