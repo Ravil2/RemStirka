@@ -3,10 +3,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <section
-      className="relative overflow-hidden border-b border-gray-300"
-      aria-labelledby="hero-title"
-    >
+    <section className="relative overflow-hidden" aria-labelledby="hero-title">
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-15 xl:py-15">
         <div className="flex flex-col lg:flex-row items-center gap-8">
           <div className="w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8 flex flex-col">
