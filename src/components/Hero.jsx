@@ -1,11 +1,17 @@
 import Image from 'next/image'
-import { PhoneCall, ShieldCheck, Clock, Wrench } from 'lucide-react'
-import { CheckCircle2 } from 'lucide-react'
+import {
+  PhoneCall,
+  ShieldCheck,
+  Clock,
+  Wrench,
+  CheckCircle2,
+} from 'lucide-react'
 
 export default function Hero() {
   return (
     <section
       id="home"
+      role="banner"
       className="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden"
     >
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-28">
@@ -17,8 +23,10 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
-              <span className="text-blue-600">Ремонт стиральных машин</span> в
-              Алматы с выездом на дом
+              <span className="text-blue-600">
+                Срочный ремонт стиральных машин
+              </span>{' '}
+              в Алматы с выездом на дом
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -58,6 +66,7 @@ export default function Hero() {
                 target="_blank"
                 href="https://wa.me/77477000871"
                 className="inline-flex items-center justify-center px-6 py-4 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-colors shadow-lg"
+                aria-label="Связаться с мастером через WhatsApp"
               >
                 <PhoneCall className="w-5 h-5 mr-2" />
                 <span>Вызвать мастера</span>
@@ -65,6 +74,7 @@ export default function Hero() {
               <a
                 href="#services"
                 className="inline-flex items-center justify-center px-6 py-4 bg-white text-gray-700 font-medium rounded-xl hover:bg-gray-100 transition-colors border border-gray-200"
+                aria-label="Посмотреть список услуг"
               >
                 Наши услуги
               </a>
@@ -74,7 +84,7 @@ export default function Hero() {
           <div className="w-full lg:w-1/2 relative h-80 md:h-[450px] lg:h-[550px]">
             <Image
               src="/images/icons/human.png"
-              alt="Мастер RemStirka ремонтирует стиральную машину"
+              alt="Мастер RemStirka проводит диагностику стиральной машины на дому"
               fill
               className="object-contain object-center"
               priority

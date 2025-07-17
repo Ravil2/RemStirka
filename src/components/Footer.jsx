@@ -1,16 +1,30 @@
-import { MessageSquareCode } from 'lucide-react'
-import { MessageSquareText } from 'lucide-react'
-import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
+import {
+  MessageSquareCode,
+  MessageSquareText,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  MessageCircle,
+} from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8">
+    <footer
+      id="contact"
+      className="bg-gray-900 text-white pt-16 pb-8"
+      aria-label="Контактная информация и форма обратной связи"
+      role="contentinfo"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Лого и описание */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <MessageCircle className="w-8 h-8 text-blue-400 mr-2" />
+              <MessageCircle
+                className="w-8 h-8 text-blue-400 mr-2"
+                aria-hidden="true"
+              />
               <span className="text-2xl font-bold">
                 Rem<span className="text-blue-400">Stirka</span>
               </span>
@@ -21,22 +35,21 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4 pt-2">
               <a
-                href="#"
+                href="https://wa.me/77477000871"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
+                title="Написать сообщение в WhatsApp"
+                aria-label="Написать сообщение в WhatsApp"
               >
                 <MessageSquareText className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="tel:+77477000871"
                 className="text-gray-400 hover:text-white transition-colors"
+                title="Позвонить"
+                aria-label="Позвонить"
               >
                 <Phone className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <MessageCircle className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -62,10 +75,10 @@ export default function Footer() {
                 <div>
                   <p className="text-gray-400">Email</p>
                   <a
-                    href="mailto:info@remstirka.kz"
+                    href="mailto:remstirka.kz@mail.ru"
                     className="hover:text-blue-400 transition-colors"
                   >
-                    info@remstirka.kz
+                    remstirka.kz@mail.ru
                   </a>
                 </div>
               </li>
@@ -87,6 +100,7 @@ export default function Footer() {
                       className="text-blue-400 pl-1"
                       target="_blank"
                       href="https://t.me/Zyko2442"
+                      rel="noopener noreferrer"
                     >
                       Telegram
                     </a>
@@ -123,28 +137,15 @@ export default function Footer() {
           {/* Форма обратной связи */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Остались вопросы?</h3>
-            <form className="space-y-4">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Ваше имя"
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-              </div>
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Телефон"
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-              </div>
+            
               <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                aria-label="Отправить форму обратной связи"
               >
-                Заказать звонок
+                <a target='_blank' href="https://wa.me/77477000871">
+                Связаться с мастером
+                </a>
               </button>
-            </form>
           </div>
         </div>
 
@@ -153,13 +154,13 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} RemStirka. Все права защищены.</p>
           <div className="mt-2 flex justify-center space-x-6">
             <a
-              href="#"
+              href="/privacy"
               className="text-gray-500 hover:text-gray-300 transition-colors text-sm"
             >
               Политика конфиденциальности
             </a>
             <a
-              href="#"
+              href="/terms"
               className="text-gray-500 hover:text-gray-300 transition-colors text-sm"
             >
               Пользовательское соглашение

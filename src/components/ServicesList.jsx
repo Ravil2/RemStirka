@@ -1,3 +1,5 @@
+'use client'
+
 import {
   ClipboardCheck,
   Wrench,
@@ -56,7 +58,7 @@ const ServicesList = () => {
   ]
 
   return (
-    <div  id='services' className="px-4 sm:px-6 lg:px-8 py-20 max-w-7xl mx-auto ">
+    <div id="services" className="px-4 sm:px-6 lg:px-8 py-20 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl sm:text-4xl font-medium text-gray-900 mb-4">
           Полный <span className="text-blue-600">перечень услуг</span>

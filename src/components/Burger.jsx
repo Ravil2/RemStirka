@@ -2,7 +2,9 @@ export default function Burger({ open, toggle }) {
   return (
     <button
       onClick={toggle}
-      aria-label={open ? 'Закрыть меню' : 'Открыть меню'}
+      aria-label={open ? 'Закрыть главное меню' : 'Открыть главное меню'}
+      aria-expanded={open}
+      aria-controls="main-navigation"
       className="flex flex-col justify-center items-center w-8 h-8 space-y-1"
     >
       <span

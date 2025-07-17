@@ -1,18 +1,6 @@
 'use client'
-import { useState, useEffect } from 'react'
-import {
-  Menu,
-  X,
-  Phone,
-  MessageSquare,
-  Wrench,
-  Home,
-  Info,
-  Mail,
-  User,
-  Send,
-  AlertCircle,
-} from 'lucide-react'
+import { useState } from 'react'
+import { X, Phone, User, Send, AlertCircle } from 'lucide-react'
 
 export const ModalPage = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -33,7 +21,6 @@ export const ModalPage = ({ isOpen, onClose }) => {
     setIsSubmitting(true)
 
     try {
-      // Замените на свои значения
       const botToken = '7813877720:AAFyALQJS54-vU9OttLxRsI5NjQrm8rDH_E'
       const chatId = '6167046254'
 
@@ -75,21 +62,27 @@ export const ModalPage = ({ isOpen, onClose }) => {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+    <div
+      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDescription"
+    >
       <div className="bg-white rounded-xl max-w-md w-full shadow-xl relative">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-1 rounded-full hover:bg-gray-100"
-          aria-label="Закрыть"
+          aria-label="Закрыть модальное окно"
         >
           <X className="w-6 h-6 text-gray-500" />
         </button>
 
         <div className="p-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <h2 id="modalTitle" className="text-2xl font-bold text-gray-900 mb-2">
             Оставить заявку
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p id="modalDescription" className="text-gray-600 mb-6">
             Наш мастер свяжется с вами в течение 15 минут
           </p>
 
@@ -101,6 +94,7 @@ export const ModalPage = ({ isOpen, onClose }) => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -134,7 +128,12 @@ export const ModalPage = ({ isOpen, onClose }) => {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4"
+              itemScope
+              itemType="https://schema.org/ContactPage"
+            >
               <div>
                 <label
                   htmlFor="name"
@@ -151,6 +150,8 @@ export const ModalPage = ({ isOpen, onClose }) => {
                     id="name"
                     name="name"
                     required
+                    itemProp="name"
+                    autoComplete="name"
                     value={formData.name}
                     onChange={handleChange}
                     className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
@@ -175,6 +176,10 @@ export const ModalPage = ({ isOpen, onClose }) => {
                     id="phone"
                     name="phone"
                     required
+                    itemProp="telephone"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    pattern="^[0-9+\s()-]{7,}$"
                     value={formData.phone}
                     onChange={handleChange}
                     className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
@@ -194,6 +199,7 @@ export const ModalPage = ({ isOpen, onClose }) => {
                   id="issue"
                   name="issue"
                   rows="3"
+                  itemProp="description"
                   value={formData.issue}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"

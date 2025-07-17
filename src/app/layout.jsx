@@ -2,6 +2,8 @@ import { Rubik } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { DefaultSeo } from 'next-seo'
+import SEO from '../next-seo.config'
 
 const rubik = Rubik({
   variable: '--font-rubik',
@@ -20,12 +22,7 @@ export const metadata = {
     'ремонт сушилок',
     'RemStirka',
   ],
-  authors: [
-    {
-      name: 'Yusupzhanov Ravil',
-      url: 'https://t.me/Zyko2442',
-    },
-  ],
+  authors: [{ name: 'Yusupzhanov Ravil', url: 'https://t.me/Zyko2442' }],
   creator: 'RemStirka',
   publisher: 'RemStirka',
   robots: 'index, follow',
@@ -46,6 +43,9 @@ export const metadata = {
     ],
     locale: 'ru_RU',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://remstirka.kz',
   },
 }
 
