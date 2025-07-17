@@ -1,36 +1,69 @@
+import Image from 'next/image'
+
 export default function Brands() {
-  const brands = ['Samsung', 'LG', 'Bosch', 'Whirlpool', 'Electrolux']
+  const brands = [
+    { name: 'Samsung', logo: '/images/brands/samsung.webp' },
+    { name: 'LG', logo: '/images/brands/lg.png' },
+    { name: 'Bosch', logo: '/images/brands/bosh.png' },
+    { name: 'Whirlpool', logo: '/images/brands/whirpool.png' },
+    { name: 'Electrolux', logo: '/images/brands/electrolux.png' },
+    { name: 'Indesit', logo: '/images/brands/indesit.png' },
+    { name: 'Beko', logo: '/images/brands/beko.webp' },
+    { name: 'Ariston', logo: '/images/brands/ariston.png' },
+  ]
 
   return (
     <section
-      className="border-t-2 border-b-2 border-gray-300 py-8 md:py-12"
-      aria-label="Популярные бренды стиральных машин"
+      className="py-12 md:py-16 bg-gray-50"
+      aria-label="Бренды стиральных машин"
     >
-      <div className="max-w-[1300px] mx-auto px-4 md:px-6">
-        <h2 className="sr-only">Мы ремонтируем технику следующих брендов</h2>
-        <ul
-          className="flex flex-wrap justify-center md:justify-between gap-3 md:gap-6"
-          itemScope
-          itemType="https://schema.org/ItemList"
-        >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-medium text-gray-900">
+            Работаем со всеми{' '}
+            <span className="text-blue-600">популярными брендами</span>
+          </h2>
+          <p className="mt-3 max-w-2xl mx-auto text-gray-600">
+            Официальные запчасти и сертифицированные специалисты для вашей
+            техники
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
           {brands.map((brand, index) => (
-            <li
+            <div
               key={index}
-              itemProp="itemListElement"
+              className="bg-white p-4 md:p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex items-center justify-center"
               itemScope
               itemType="https://schema.org/ListItem"
-              className="cursor-pointer"
             >
-              <span
-                itemProp="name"
-                className="bg-black text-white px-4 py-2 rounded-md font-bold hover:bg-gray-800 transition-colors duration-200 text-sm md:text-xl whitespace-nowrap"
-              >
-                {brand}
-              </span>
-              <meta itemProp="position" content={index + 1} />
-            </li>
+              <div className="relative w-full h-12 md:h-16">
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  fill
+                  className="object-contain object-center"
+                  loading="lazy"
+                  itemProp="image"
+                />
+                <meta itemProp="name" content={brand.name} />
+                <meta itemProp="position" content={index + 1} />
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-gray-600">
+            Не нашли свой бренд?{' '}
+            <a
+              href="#contact"
+              className="text-blue-600 hover:text-blue-800 font-medium"
+            >
+              Уточните у нашего специалиста
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   )

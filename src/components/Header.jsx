@@ -144,8 +144,8 @@ export default function Header() {
 
 const navItems = [
   { label: 'Главная', href: '#home', icon: <Home className="w-5 h-5" /> },
-  { label: 'Услуги', href: '#services', icon: <Wrench className="w-5 h-5" /> },
   { label: 'О нас', href: '#about', icon: <Info className="w-5 h-5" /> },
+  { label: 'Услуги', href: '#services', icon: <Wrench className="w-5 h-5" /> },
   { label: 'Контакты', href: '#contact', icon: <Mail className="w-5 h-5" /> },
   {
     label: 'Оставить заявку',
