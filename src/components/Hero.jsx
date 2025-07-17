@@ -5,7 +5,6 @@ import { CheckCircle2 } from 'lucide-react'
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden">
-      {/* Декоративные элементы */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-blue-200 blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-blue-100 blur-3xl"></div>
@@ -13,7 +12,6 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-28">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20">
-          {/* Текстовый блок */}
           <div className="w-full lg:w-1/2 space-y-6 md:space-y-8">
             <div className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-700 bg-blue-100 rounded-full mb-4">
               <ShieldCheck className="w-4 h-4 mr-2" />
@@ -26,15 +24,14 @@ export default function Hero() {
 
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               <strong>RemStirka</strong> — профессиональный сервис по ремонту бытовой техники. 
-              Мы устраняем любые неисправности быстро и с гарантией до 2 лет.
+              Мы устраняем любые неисправности быстро и с гарантией до 1 года.
             </p>
 
-            {/* Преимущества в виде списка */}
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
               {[
                 { icon: <Clock className="w-5 h-5 text-blue-600" />, text: "Выезд в течение 2 часов" },
                 { icon: <Wrench className="w-5 h-5 text-blue-600" />, text: "Оригинальные запчасти" },
-                { icon: <ShieldCheck className="w-5 h-5 text-blue-600" />, text: "Гарантия до 2 лет" },
+                { icon: <ShieldCheck className="w-5 h-5 text-blue-600" />, text: "Гарантия до 1 года" },
                 { icon: <PhoneCall className="w-5 h-5 text-blue-600" />, text: "Круглосуточная поддержка" }
               ].map((item, index) => (
                 <li key={index} className="flex items-center space-x-2">
@@ -44,7 +41,6 @@ export default function Hero() {
               ))}
             </ul>
 
-            {/* Кнопки действий */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a
                 href="#request"
@@ -62,7 +58,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Изображение */}
           <div className="w-full lg:w-1/2 relative h-80 md:h-[450px] lg:h-[550px]">
             <Image
               src="/images/icons/human.png"
@@ -73,7 +68,6 @@ export default function Hero() {
               quality={100}
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            {/* Декоративный элемент на изображении */}
             <div className="absolute -bottom-6 -right-6 bg-white px-4 py-3 rounded-lg shadow-md border border-gray-100 hidden lg:block">
               <div className="flex items-center">
                 <div className="bg-green-100 p-2 rounded-full mr-3">
