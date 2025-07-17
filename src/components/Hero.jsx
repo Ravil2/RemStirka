@@ -24,7 +24,7 @@ export default function Hero() {
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
               <span className="text-blue-600">
-                Срочный ремонт стиральных машин
+                Качественный ремонт стиральных машин
               </span>{' '}
               в Алматы с выездом на дом
             </h1>
