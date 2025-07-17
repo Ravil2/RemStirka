@@ -1,9 +1,10 @@
+import { MessageSquareCode } from 'lucide-react'
 import { MessageSquareText } from 'lucide-react'
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Лого и описание */}
@@ -23,7 +24,7 @@ export default function Footer() {
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <MessageSquareText  className="w-5 h-5" />
+                <MessageSquareText className="w-5 h-5" />
               </a>
               <a
                 href="#"
@@ -68,18 +69,28 @@ export default function Footer() {
                   </a>
                 </div>
               </li>
-              <li className="flex items-start">
-                <MapPin className="w-5 h-5 text-blue-400 mt-0.5 mr-3 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-400">Адрес</p>
-                  <p>г. Алматы, ул. Ремонтная 123</p>
-                </div>
-              </li>
+
               <li className="flex items-start">
                 <Clock className="w-5 h-5 text-blue-400 mt-0.5 mr-3 flex-shrink-0" />
                 <div>
                   <p className="text-gray-400">График работы</p>
-                  <p>Ежедневно: 8:00 - 22:00</p>
+                  <p>Ежедневно: 8:00 - 18:00</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <MessageSquareCode className="w-5 h-5 text-blue-400 mt-0.5 mr-3 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-400">Разработчик сайта</p>
+                  <p>
+                    Y. Ravil |
+                    <a
+                      className="text-blue-400 pl-1"
+                      target="_blank"
+                      href="https://t.me/Zyko2442"
+                    >
+                      Telegram
+                    </a>
+                  </p>
                 </div>
               </li>
             </ul>

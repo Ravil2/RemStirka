@@ -13,7 +13,7 @@ export default function Brands() {
   ]
 
   return (
-    <section
+    <section id='brands'
       className="py-12 md:py-16 bg-gray-50"
       aria-label="Бренды стиральных машин"
     >

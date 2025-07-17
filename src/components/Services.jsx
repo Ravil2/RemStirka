@@ -46,7 +46,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id='about' className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Заголовок */}
       <div className="text-center mb-16">
         <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-700 bg-blue-100 rounded-full mb-4">
@@ -135,7 +135,7 @@ export default function Services() {
       </div>
 
       {/* CTA */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 md:p-12 text-center text-white">
+      <div id='contact' className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 md:p-12 text-center text-white">
         <div className="max-w-2xl mx-auto">
           <PhoneCall className="w-10 h-10 mx-auto mb-4 text-blue-200" />
           <h3 className="text-2xl md:text-3xl font-medium mb-4">
