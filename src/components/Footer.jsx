@@ -99,7 +99,7 @@ export default function Footer() {
                     <a
                       className="text-blue-400 pl-1"
                       target="_blank"
-                      href="https://t.me/Zyko2442"
+                      href="https://t.me/yoo003"
                       rel="noopener noreferrer"
                     >
                       Telegram
