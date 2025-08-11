@@ -21,28 +21,13 @@ export const ModalPage = ({ isOpen, onClose }) => {
     setIsSubmitting(true)
 
     try {
-      const botToken = process.env.NEXT_PUBLIC_BOT_TOKEN
-      const chatId = process.env.NEXT_PUBLIC_CHAT_ID
-
-      const message = `📌 Новая заявка:\n\n👤 Имя: ${
-        formData.name
-      }\n📞 Телефон: ${formData.phone}\n🔧 Проблема: ${
-        formData.issue || 'Не указана'
-      }`
-
-      const response = await fetch(
-        `https://api.telegram.org/bot${botToken}/sendMessage`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: message,
-          }),
+      const response = await fetch('/api/sendMessage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      )
+        body: JSON.stringify(formData),
+      })
 
       if (response.ok) {
         setSubmitStatus('success')
@@ -179,7 +164,7 @@ export const ModalPage = ({ isOpen, onClose }) => {
                     itemProp="telephone"
                     autoComplete="tel"
                     inputMode="tel"
-                    pattern="^[0-9+\s()-]{7,}$"
+                    pattern="^[0-9+\s()\-]{7,}$"
                     value={formData.phone}
                     onChange={handleChange}
                     className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
