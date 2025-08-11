@@ -21,8 +21,8 @@ export const ModalPage = ({ isOpen, onClose }) => {
     setIsSubmitting(true)
 
     try {
-      const botToken = process.env.NEXT_PUBLIC_BOT_TOKEN
-      const chatId = process.env.NEXT_PUBLIC_CHAT_ID
+      const botToken = process.env.TELEGRAM_BOT_TOKEN
+      const chatId = process.env.TELEGRAM_CHAT_ID
 
       const message = `📌 Новая заявка:\n\n👤 Имя: ${
         formData.name
