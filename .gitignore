@@ -40,4 +40,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
 .env.local
+=======
+<<<<<<< HEAD
+=======
+.env.local
+>>>>>>> 1b5a727 (Обновил проект, добавил env)
+>>>>>>> 2c92e26 (resolve merge conflict and use env variables)
