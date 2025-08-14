@@ -40,7 +40,6 @@
 ## 📬 Контакты
 
 **RemStirka — Ремонт бытовой техники в Алматы**  
-📱 Telegram разработчика: [@Zyko2442](https://t.me/Zyko2442)  
 🌐 Сайт: [https://remstirka.kz](https://remstirka.kz)
 
 ---
