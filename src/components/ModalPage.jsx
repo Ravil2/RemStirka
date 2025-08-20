@@ -164,7 +164,7 @@ export const ModalPage = ({ isOpen, onClose }) => {
                     itemProp="telephone"
                     autoComplete="tel"
                     inputMode="tel"
-                    pattern="^[0-9+\s()\-]{7,}$"
+                    pattern="^[0-9+\s()-]{7,}$"
                     value={formData.phone}
                     onChange={handleChange}
                     className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"

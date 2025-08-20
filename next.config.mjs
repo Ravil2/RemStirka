@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   siteUrl: 'https://remstirka.kz',
-};
-=======
-const nextConfig = {
+
   async redirects() {
     return [
       {
@@ -29,6 +26,5 @@ const nextConfig = {
     ]
   },
 }
->>>>>>> b6ed988 (addpages)
 
 export default nextConfig

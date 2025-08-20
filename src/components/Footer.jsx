@@ -99,7 +99,7 @@ export default function Footer() {
                     <a
                       className="text-blue-400 pl-1"
                       target="_blank"
-                      href="https://t.me/yoo003"
+                      href="https://t.me/Zyko2442"
                       rel="noopener noreferrer"
                     >
                       Telegram
@@ -137,15 +137,15 @@ export default function Footer() {
           {/* Форма обратной связи */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Остались вопросы?</h3>
-            
-              <button
-                className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                aria-label="Отправить форму обратной связи"
-              >
-                <a target='_blank' href="https://wa.me/77477000871">
+
+            <button
+              className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+              aria-label="Отправить форму обратной связи"
+            >
+              <a target="_blank" href="https://wa.me/77477000871">
                 Связаться с мастером
-                </a>
-              </button>
+              </a>
+            </button>
           </div>
         </div>
 
