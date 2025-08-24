@@ -10,7 +10,7 @@ export default function TermsOfUse() {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Пользовательское соглашение',
-      url: 'https://remstirka.kz/terms-of-use',
+      url: 'https://remstirka.kz/terms',
       description:
         'Пользовательское соглашение сайта remstirka.kz, регулирующее условия использования, права и обязанности сторон, отказ от ответственности и изменения условий.',
       inLanguage: 'ru',
