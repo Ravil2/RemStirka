@@ -12,7 +12,6 @@ import {
   PhoneCall,
 } from 'lucide-react'
 import Image from 'next/image'
-import Head from 'next/head'
 
 const services = [
   {
@@ -53,20 +52,25 @@ export default function Services() {
     serviceType: 'Ремонт стиральных машин',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'Remstirka.kz',
+      name: 'RemStirka',
       url: 'https://remstirka.kz',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Алматы',
         addressCountry: 'KZ',
       },
-      telephone: '+7-747-700-0871',
+      telephone: '+77477000871',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Алматы',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Услуги по ремонту',
-      itemListElement: services.map((s) => ({
+      name: 'Услуги по ремонту стиральных машин',
+      itemListElement: services.map((s, index) => ({
         '@type': 'Offer',
+        position: index + 1,
         itemOffered: {
           '@type': 'Service',
           name: s.title,
@@ -78,29 +82,15 @@ export default function Services() {
 
   return (
     <>
-      <Head>
-        <title>Ремонт стиральных машин в Алматы | Услуги Remstirka.kz</title>
-        <meta
-          name="description"
-          content="Качественный ремонт стиральных машин с гарантией до 1 года. Бесплатный выезд мастера. Профессиональная диагностика и оригинальные запчасти."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Ремонт стиральных машин в Алматы" />
-        <meta
-          property="og:description"
-          content="Remstirka.kz — надежный ремонт стиральных машин в Алматы. Бесплатный выезд, оригинальные запчасти, гарантия качества."
-        />
-        <meta property="og:url" content="https://remstirka.kz" />
-        <meta property="og:type" content="website" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
 
       <section
         id="about"
         className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+        aria-label="О сервисе RemStirka - профессиональный ремонт стиральных машин"
       >
         {/* Заголовок */}
         <div className="text-center mb-16">
@@ -108,10 +98,10 @@ export default function Services() {
             <Zap className="w-4 h-4 mr-1" />
             Наш сервис
           </span>
-          <h1 className="text-3xl sm:text-4xl font-medium text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-medium text-gray-900 mb-4">
             Профессиональный{' '}
             <span className="text-blue-600">ремонт техники</span>
-          </h1>
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Полный спектр услуг с гарантией качества и использованием
             оригинальных запчастей
@@ -123,10 +113,12 @@ export default function Services() {
           <div className="relative h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
             <Image
               src="/images/icons/service.png"
-              alt="Мастер ремонтирует технику"
+              alt="Профессиональный мастер RemStirka выполняет ремонт стиральной машины в Алматы. Качественный ремонт с гарантией до 1 года."
               fill
               className="object-contain"
               priority
+              quality={90}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -165,10 +157,10 @@ export default function Services() {
 
         {/* Услуги */}
         <div className="mb-20">
-          <h2 className="text-2xl font-medium text-center text-gray-900 mb-12 flex justify-center items-center">
+          <h3 className="text-2xl font-medium text-center text-gray-900 mb-12 flex justify-center items-center">
             <Settings className="w-6 h-6 text-blue-600 mr-2" />
             Наши услуги
-          </h2>
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
               <div
@@ -178,9 +170,9 @@ export default function Services() {
                 <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 bg-blue-50 group-hover:bg-blue-100 transition-colors">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-2">
+                <h4 className="text-xl font-medium text-gray-900 mb-2">
                   {service.title}
-                </h3>
+                </h4>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <span className="inline-flex items-center px-3 py-1 text-xs font-medium text-blue-700 bg-blue-100 rounded-full">
                   {service.highlight}

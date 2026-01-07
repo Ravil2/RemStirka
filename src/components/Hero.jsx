@@ -12,6 +12,7 @@ export default function Hero() {
     <section
       id="home"
       role="banner"
+      aria-label="Главная секция - ремонт стиральных машин в Алматы"
       className="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden"
     >
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-28">
@@ -84,12 +85,13 @@ export default function Hero() {
           <div className="w-full lg:w-1/2 relative h-80 md:h-[450px] lg:h-[550px]">
             <Image
               src="/images/icons/human.png"
-              alt="Мастер RemStirka проводит диагностику стиральной машины на дому"
+              alt="Мастер RemStirka проводит диагностику и ремонт стиральной машины на дому в Алматы. Профессиональный ремонт стиральных машин с выездом мастера."
               fill
               className="object-contain object-center"
               priority
-              quality={100}
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              quality={90}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
+              fetchPriority="high"
             />
             <div className="absolute -bottom-6 -right-6 bg-white px-4 py-3 rounded-lg shadow-md border border-gray-100 hidden lg:block">
               <div className="flex items-center">

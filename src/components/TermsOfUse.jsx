@@ -1,32 +1,4 @@
-'use client'
-
-import { useEffect } from 'react'
-
 export default function TermsOfUse() {
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.innerHTML = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Пользовательское соглашение',
-      url: 'https://remstirka.kz/terms',
-      description:
-        'Пользовательское соглашение сайта remstirka.kz, регулирующее условия использования, права и обязанности сторон, отказ от ответственности и изменения условий.',
-      inLanguage: 'ru',
-      mainEntity: {
-        '@type': 'Organization',
-        name: 'RemStirka',
-        url: 'https://remstirka.kz',
-        logo: 'https://remstirka.kz/logo.png',
-      },
-    })
-    document.head.appendChild(script)
-    return () => {
-      document.head.removeChild(script)
-    }
-  }, [])
-
   return (
     <section className="max-w-3xl mx-auto px-4 py-12 text-gray-800">
       <h1 className="text-3xl font-bold mb-6 mt-15">

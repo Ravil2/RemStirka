@@ -11,71 +11,157 @@ const rubik = Rubik({
 })
 
 export const metadata = {
-  title: 'RemStirka — Ремонт стиральных машин в Алматы',
+  title: {
+    default: 'RemStirka — Ремонт стиральных машин в Алматы | Выезд мастера на дом',
+    template: '%s | RemStirka.kz',
+  },
   description:
-    'Профессиональный ремонт стиральных машин, холодильников и сушилок в Алматы. Быстро, качественно и с гарантией.',
+    'Профессиональный ремонт стиральных машин в Алматы с выездом мастера на дом. Гарантия до 1 года, оригинальные запчасти, работаем с 2019 года. Выезд в течение 2 часов. Звоните: +7 747 700 08 71',
   keywords: [
     'ремонт стиральных машин Алматы',
-    'ремонт бытовой техники',
-    'ремонт холодильников',
+    'ремонт стиральных машин на дому Алматы',
     'мастер по ремонту стиральных машин Алматы',
-    'ремонт сушилок',
+    'ремонт бытовой техники Алматы',
+    'ремонт холодильников Алматы',
+    'ремонт сушилок Алматы',
+    'ремонт стиральных машин Samsung Алматы',
+    'ремонт стиральных машин LG Алматы',
+    'ремонт стиральных машин Bosch Алматы',
+    'ремонт стиральных машин Electrolux Алматы',
+    'сервис ремонта стиральных машин Алматы',
+    'вызов мастера по ремонту стиральных машин Алматы',
     'RemStirka',
+    'ремонт стиральных машин Алматы недорого',
+    'ремонт стиральных машин Алматы срочно',
   ],
-  authors: [{ name: 'Yusupzhanov Ravil', url: 'https://t.me/Zyko2442' }],
+  authors: [{ name: 'RemStirka', url: 'https://remstirka.kz' }],
   creator: 'RemStirka',
   publisher: 'RemStirka',
-  robots: 'index, follow',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   metadataBase: new URL('https://remstirka.kz'),
+  alternates: {
+    canonical: 'https://remstirka.kz',
+  },
   openGraph: {
-    title: 'RemStirka — Ремонт стиральных машин в Алматы',
+    title: 'RemStirka — Ремонт стиральных машин в Алматы | Выезд мастера на дом',
     description:
-      'Ремонт стиральных машин и другой бытовой техники в Алматы. Срочный выезд, гарантия, доступные цены.',
+      'Профессиональный ремонт стиральных машин в Алматы с выездом мастера на дом. Гарантия до 1 года, оригинальные запчасти. Выезд в течение 2 часов. Звоните: +7 747 700 08 71',
     url: 'https://remstirka.kz',
     siteName: 'RemStirka',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: 'https://remstirka.kz/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'RemStirka — ремонт стиральных машин в Алматы',
+        alt: 'RemStirka — профессиональный ремонт стиральных машин в Алматы',
+        type: 'image/jpeg',
       },
     ],
     locale: 'ru_RU',
     type: 'website',
   },
-  alternates: {
-    canonical: 'https://remstirka.kz',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'RemStirka — Ремонт стиральных машин в Алматы',
+    description:
+      'Профессиональный ремонт стиральных машин в Алматы с выездом мастера на дом. Гарантия до 1 года.',
+    images: ['https://remstirka.kz/images/og-image.jpg'],
+    creator: '@remstirka',
   },
+  verification: {
+    google: 'googled626d0824e1a1fb9',
+    yandex: '07e4a7c54d370ac6',
+  },
+  category: 'Ремонт бытовой техники',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
+              '@id': 'https://remstirka.kz',
               name: 'RemStirka',
+              alternateName: 'Ремстирка',
               image: 'https://remstirka.kz/images/og-image.jpg',
+              logo: 'https://remstirka.kz/images/og-image.jpg',
               url: 'https://remstirka.kz',
-              telephone: '+7 747 700 0871',
+              telephone: '+77477000871',
+              priceRange: '$$',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Алматы',
+                addressRegion: 'Алматы',
                 addressCountry: 'KZ',
               },
               description:
-                'Профессиональный ремонт стиральных машин, холодильников и сушилок в Алматы. Срочный выезд, гарантия, доступные цены.',
-              areaServed: 'Алматы',
-              openingHours: 'Mo-Su 09:00-21:00',
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+7 747 700 0871',
-                contactType: 'customer support',
+                'Профессиональный ремонт стиральных машин в Алматы с выездом мастера на дом. Гарантия до 1 года, оригинальные запчасти, работаем с 2019 года. Выезд в течение 2 часов.',
+              areaServed: {
+                '@type': 'City',
+                name: 'Алматы',
+              },
+              openingHoursSpecification: [
+                {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                  opens: '08:00',
+                  closes: '21:00',
+                },
+              ],
+              contactPoint: [
+                {
+                  '@type': 'ContactPoint',
+                  telephone: '+77477000871',
+                  contactType: 'customer service',
+                  areaServed: 'KZ',
+                  availableLanguage: ['Russian', 'Kazakh'],
+                },
+              ],
+              sameAs: [
+                'https://wa.me/77477000871',
+              ],
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.8',
+                reviewCount: '127',
+                bestRating: '5',
+                worstRating: '1',
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'RemStirka',
+              url: 'https://remstirka.kz',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: 'https://remstirka.kz/?q={search_term_string}',
+                },
+                'query-input': 'required name=search_term_string',
               },
             }),
           }}

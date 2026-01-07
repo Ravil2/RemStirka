@@ -1,19 +1,6 @@
-'use client'
-
-import Head from 'next/head'
-
 export default function PrivacyPolicy() {
   return (
     <>
-      <Head>
-        <title>Политика конфиденциальности | Remstirka.kz</title>
-        <meta
-          name="description"
-          content="Узнайте, как Remstirka.kz собирает, использует и защищает ваши персональные данные. Политика конфиденциальности сайта."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://remstirka.kz/privacy-policy" />
-      </Head>
 
       <section className="max-w-3xl mx-auto px-4 py-12 text-gray-800">
         <h1 className="text-3xl font-bold mb-6 mt-15">Политика конфиденциальности</h1>

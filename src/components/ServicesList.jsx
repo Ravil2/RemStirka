@@ -80,10 +80,10 @@ const ServicesList = () => {
               </span>
               <div className="w-0.5 h-12 bg-gray-200 mr-4 mt-2"></div>
               <div>
-                <h3 className="text-xl font-medium text-gray-900 flex items-center">
+                <h4 className="text-xl font-medium text-gray-900 flex items-center">
                   {service.icon}
                   <span className="ml-2">{service.name}</span>
-                </h3>
+                </h4>
                 <p className="text-gray-600 mt-2">{service.description}</p>
               </div>
             </div>

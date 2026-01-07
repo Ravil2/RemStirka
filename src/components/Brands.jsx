@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import Head from 'next/head'
 
 export default function Brands() {
   const brands = [
@@ -15,31 +14,33 @@ export default function Brands() {
     { name: 'Ariston', logo: '/images/brands/ariston.png' },
   ]
 
+  const brandListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Популярные бренды стиральных машин',
+    description: 'Бренды стиральных машин, которые мы ремонтируем в Алматы',
+    itemListElement: brands.map((brand, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Brand',
+        name: brand.name,
+      },
+    })),
+  }
+
   return (
     <>
-      {/* SEO Head — если компонент используется как страница */}
-      <Head>
-        <title>
-          Ремонт стиральных машин популярных брендов в Алматы | RemStirka
-        </title>
-        <meta
-          name="description"
-          content="Ремонт стиральных машин Samsung, LG, Bosch, Electrolux и других брендов в Алматы. Официальные запчасти и опытные мастера."
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(brandListSchema) }}
+      />
 
       <section
         id="brands"
         className="py-12 md:py-16 bg-gray-50"
         aria-label="Бренды стиральных машин"
-        itemScope
-        itemType="https://schema.org/ItemList"
       >
-        <meta itemProp="name" content="Популярные бренды стиральных машин" />
-        <meta
-          itemProp="itemListOrder"
-          content="https://schema.org/ItemListOrderAscending"
-        />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -58,21 +59,16 @@ export default function Brands() {
               <div
                 key={index}
                 className="cursor-pointer bg-white p-4 md:p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex items-center justify-center"
-                itemProp="itemListElement"
-                itemScope
-                itemType="https://schema.org/ListItem"
               >
-                <meta itemProp="position" content={index + 1} />
                 <div className="relative w-full h-12 md:h-16">
                   <Image
                     src={brand.logo}
-                    alt={`Логотип бренда ${brand.name}`}
-                    fill
+                    alt={`Логотип бренда ${brand.name} - ремонт стиральных машин ${brand.name} в Алматы`}
                     className="object-contain object-center"
                     loading="lazy"
-                    itemProp="image"
+                    width={120}
+                    height={60}
                   />
-                  <meta itemProp="name" content={brand.name} />
                 </div>
               </div>
             ))}
