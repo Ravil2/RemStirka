@@ -139,8 +139,8 @@ export default function RootLayout({ children }) {
               ],
               aggregateRating: {
                 '@type': 'AggregateRating',
-                ratingValue: '4.8',
-                reviewCount: '127',
+                ratingValue: '5.0',
+                reviewCount: '3',
                 bestRating: '5',
                 worstRating: '1',
               },
@@ -160,6 +160,10 @@ export default function RootLayout({ children }) {
                     bestRating: '5',
                     worstRating: '1',
                   },
+                  itemReviewed: {
+                    '@type': 'LocalBusiness',
+                    '@id': 'https://remstirka.kz',
+                  },
                 },
                 {
                   '@type': 'Review',
@@ -176,6 +180,10 @@ export default function RootLayout({ children }) {
                     bestRating: '5',
                     worstRating: '1',
                   },
+                  itemReviewed: {
+                    '@type': 'LocalBusiness',
+                    '@id': 'https://remstirka.kz',
+                  },
                 },
                 {
                   '@type': 'Review',
@@ -191,6 +199,10 @@ export default function RootLayout({ children }) {
                     ratingValue: '5',
                     bestRating: '5',
                     worstRating: '1',
+                  },
+                  itemReviewed: {
+                    '@type': 'LocalBusiness',
+                    '@id': 'https://remstirka.kz',
                   },
                 },
               ],

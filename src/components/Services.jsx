@@ -50,18 +50,8 @@ export default function Services() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: 'Ремонт стиральных машин',
-    provider: {
-      '@type': 'LocalBusiness',
-      '@id': 'https://remstirka.kz',
-      name: 'RemStirka',
-      url: 'https://remstirka.kz',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Алматы',
-        addressCountry: 'KZ',
-      },
-      telephone: '+77477000871',
-    },
+    // Убрали provider, чтобы избежать дублирования LocalBusiness
+    // Основной LocalBusiness уже определен в layout.jsx
     areaServed: {
       '@type': 'City',
       name: 'Алматы',
