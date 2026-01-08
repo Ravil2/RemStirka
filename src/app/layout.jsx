@@ -144,6 +144,56 @@ export default function RootLayout({ children }) {
                 bestRating: '5',
                 worstRating: '1',
               },
+              review: [
+                {
+                  '@type': 'Review',
+                  author: {
+                    '@type': 'Person',
+                    name: 'Алия Нургазинова',
+                  },
+                  datePublished: '2025-05-15',
+                  reviewBody:
+                    'Мастер приехал через час после звонка, быстро диагностировал проблему и починил стиральную машину. Все объяснил, дал гарантию на работу. Очень вежливый и профессиональный сервис!',
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: '5',
+                    bestRating: '5',
+                    worstRating: '1',
+                  },
+                },
+                {
+                  '@type': 'Review',
+                  author: {
+                    '@type': 'Person',
+                    name: 'Арман Жунусов',
+                  },
+                  datePublished: '2025-06-03',
+                  reviewBody:
+                    'Ребята спасли нашу стиральную машину Bosch, которая перестала отжимать. Сначала обращались в другой сервис - не смогли помочь. Здесь же все починили за один визит, запчасти оригинальные. Рекомендую!',
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: '5',
+                    bestRating: '5',
+                    worstRating: '1',
+                  },
+                },
+                {
+                  '@type': 'Review',
+                  author: {
+                    '@type': 'Person',
+                    name: 'Дамир Каримов',
+                  },
+                  datePublished: '2025-06-10',
+                  reviewBody:
+                    'Лучший сервис по ремонту техники в Алматы! Чинили сложную поломку в стиральной машине LG - в других местах сразу говорили, что проще новую купить. Здесь нашли решение и сделали все за разумные деньги.',
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: '5',
+                    bestRating: '5',
+                    worstRating: '1',
+                  },
+                },
+              ],
             }),
           }}
         />

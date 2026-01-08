@@ -49,45 +49,11 @@ export default function Reviews() {
     setCurrentSlide((prev) => (prev === 0 ? reviews.length - 1 : prev - 1))
   }
 
-  const reviewSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'RemStirka',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: reviews.length.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: reviews.map((review) => ({
-      '@type': 'Review',
-      author: {
-        '@type': 'Person',
-        name: review.name,
-      },
-      datePublished: review.date,
-      reviewBody: review.text,
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: review.rating.toString(),
-        bestRating: '5',
-        worstRating: '1',
-      },
-    })),
-  }
-
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.innerHTML = JSON.stringify(reviewSchema)
-    document.head.appendChild(script)
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script)
-      }
-    }
-  }, [])
+  // Используем ItemList для отзывов, чтобы избежать дублирования LocalBusiness
+  // AggregateRating должен быть только в layout.jsx для основного LocalBusiness
+  // Убрали структурированные данные отсюда, чтобы избежать дублирования
+  // AggregateRating и review должны быть только в layout.jsx для основного LocalBusiness
+  // Это предотвращает ошибку "Отзыву назначено несколько общих оценок" в Google Search Console
 
   const formatDate = (dateString) => {
     const date = new Date(dateString)

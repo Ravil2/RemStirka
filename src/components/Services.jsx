@@ -52,6 +52,7 @@ export default function Services() {
     serviceType: 'Ремонт стиральных машин',
     provider: {
       '@type': 'LocalBusiness',
+      '@id': 'https://remstirka.kz',
       name: 'RemStirka',
       url: 'https://remstirka.kz',
       address: {

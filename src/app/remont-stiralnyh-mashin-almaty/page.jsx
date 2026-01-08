@@ -73,6 +73,7 @@ export default function RepairWashingMachinesPage() {
     serviceType: 'Ремонт стиральных машин',
     provider: {
       '@type': 'LocalBusiness',
+      '@id': 'https://remstirka.kz',
       name: 'RemStirka',
       url: 'https://remstirka.kz',
       telephone: '+77477000871',
